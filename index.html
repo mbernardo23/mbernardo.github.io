@@ -1,41 +1,62 @@
-<html>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A something to think about?</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Meu Portfólio</title>
 </head>
 <body>
-    <header>
-        <h1>Michael Bernardo</h1>
-        <p>Analista de Qualidade</p>
-    </header>
-    
-    <section class="sobre-mim">
-        <h2>Sobre Mim</h2>
-        <p>O Michael é do tipo que gosta de conversar, também fica de blá blá blá. Atento a tudo ao redor (provavelmente tenha TDAH). Ama praticar esportes, preferencialmente futebol e vôlei, ama anime, a Marvel, a DC, e afins.</p>
-    </section>
-    
-    <section class="projetos">
-        <h2>Projetos Recentes</h2>
-        <div class="projeto">
-            <h3>Projeto Acadêmico - Riders on The Storm</h3>
-            <p>A framigerada tentativa de termos criado um site bom o suficiente para suprir os requisitos solicitados!</p>
-            <a href="#">Ver Projeto</a>
-        </div>
-    </section>
-    
-    <section class="contato">
-        <h2>Contato</h2>
-        <p>Entre em contato comigo em: bernardomichael18@gmail.com</p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2023 Bernardo, Michael.</p>
-    </footer>
-    
-    <script src="script.js"></script>
+  <header>
+    <h1>Meu Portfólio</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Sobre Mim</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Bem-vindo ao Meu Portfólio</h2>
+    <p>Um lugar para mostrar minhas habilidades e projetos.</p>
+  </section>
+
+  <section id="about">
+    <h2>Sobre Mim</h2>
+    <p>Eu sou um desenvolvedor apaixonado por criar soluções incríveis.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projetos</h2>
+    <div class="project">
+      <h3>Projeto 1</h3>
+      <p>Descrição do Projeto 1.</p>
+    </div>
+    <div class="project">
+      <h3>Projeto 2</h3>
+      <p>Descrição do Projeto 2.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contato</h2>
+    <p>Vamos trabalhar juntos! Entre em contato comigo.</p>
+    <form>
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Meu Portfólio</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
