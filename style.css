@@ -1,56 +1,54 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav li {
-    margin: 0 1em;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  section {
-    padding: 2em;
-    text-align: center;
-  }
-  
-  #home {
-    background-color: #f0f0f0;
-  }
-  
-  #projects {
-    background-color: #e0e0e0;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+    justify-content: space-between 5px;
+}
+
+body{
+    background-color: #172627;
+    padding-top: 5%;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 5%;
+}
+
+.div1{
+    background-color: #20CD8D; /* Cor verde */
+    color: #ffffff; /* Cor do texto (branco) */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
+    width: 75%; /* Largura do bloco */
+    height: 300px; /* Altura do bloco */
+    display: flex; /* Para alinhar o texto */
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: flex-end; /* Alinha verticalmente ao final */
+    font-family: "Poetsen One", sans-serif; /* Família da fonte */
+    font-weight: 400px; 
+    font-style: normal; /* Tipo de fonte */
+    font-size: 30px; /* Tamanho da fonte */   
+
+}
+.link {
+        text-decoration: none; /* Remove sublinhado padrão */
+        color: inherit; /* Herda a cor do texto */
+}
+    
+.texto-final{
+    margin: 0; /* Remove margens padrão do parágrafo */
+}
+
+@media screen and (max-width: 668px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores que 768px */
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .container {
+        grid-template-columns: 1fr; /* 1 coluna em telas menores que 480px */
+    }
+}
