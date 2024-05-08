@@ -31,9 +31,8 @@
 
 .card{
     background-color: #20CD8D; /* Cor verde */
-    text-align: center; /* Centraliza o texto */
     border-radius: 50px; /* Borda arredondada */
-    max-width: 300px;
+    max-width: 300px; /* Tamanho máximo */
     height: 280px; /* Altura do bloco */
     display: flex; /* Para alinhar o texto */
     justify-content: center; /* Alinha horizontalmente */
@@ -42,7 +41,49 @@
     font-weight: 400px; 
     font-style: normal; /* Tipo de fonte */
     font-size: 30px; /* Tamanho da fonte */
+    position: relative; /* Posição dos itens sobre o card */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+    transition: 0.3s ease; /* Transição suave da transformação */
 }
+
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #6dd8b1 /* Cor enquanto mouse em cima */
+}
+
+
+.card_text {
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    padding: 4px;
+    font-size: 30px; /* Tamanho do texto */
+    color: white; /* Cor do texto */
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease; /* Transição suave da transformação */
+}
+
+.card_icon {
+    max-width: 50px;
+    margin-left: 28px;
+    margin-bottom: 55px;
+    transition: 0.3s ease; /* Transição suave da transformação */
+}
+
+.card_index{
+    font-family: "Poetsen One", sans-serif; /* Família da fonte */
+    color: white;
+    font-size: 60px;
+    transition: 0.3s ease; /* Transição suave da borda */
+    border-left: 5px solid #20CD8D; /* Define uma margem à esquerda transparente */
+    border-radius: 5px;
+    padding-left: 4%;
+}
+
 
 body{
     background-color: #172627;
