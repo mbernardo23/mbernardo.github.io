@@ -54,7 +54,6 @@
     background-color: #6dd8b1 /* Cor enquanto mouse em cima */
 }
 
-
 .card_text {
     position: absolute;
     bottom: -20px;
@@ -84,10 +83,10 @@
     padding-left: 4%;
 }
 
-
 body{
     background-color: #172627;
     margin: 5%;
+    display: grid;
 }
 
 .link {
@@ -97,4 +96,36 @@ body{
     
 .texto-final{
     margin: 0; /* Remove margens padrão do parágrafo */
+}
+
+footer {
+    color: white; /* Texto branco */
+    text-align: center; /* Centraliza todo o conteúdo */
+    width: 100%; /* Ocupa toda a largura */
+    margin-top: auto; /* Espaço acima do footer (opcional) */
+}
+
+footer img {
+    margin: auto; /* Centraliza a imagem horizontalmente */
+}
+
+footer p {
+    margin: 5px 0; /* Margem para parágrafos */
+}
+
+.icon-link {
+    display: inline-block;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+.icon-link:hover {
+    transform: perspective(500px) scale(1.5) rotateY(15deg);
+}
+
+.copyright {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
