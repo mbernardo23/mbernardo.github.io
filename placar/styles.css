@@ -1,0 +1,371 @@
+body {
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    font-family: Arial, sans-serif;
+    background-color: #172627;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    justify-content: center;
+    align-items: center; 
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.team {
+    width: 48%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.team-name {
+    width: 80%;
+    padding: 8px;
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.score {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #2c3e50;
+}
+
+.buttons button {
+    padding: 8px 15px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.buttons button:hover {
+    background-color: #2980b9;
+}
+
+.sets {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.set {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #20CD8D;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.controls button:hover {
+    background-color: #20CD8D;
+}
+
+.game-history {
+    margin-top: 30px;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+
+#historyList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#historyList li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.point-type {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.point-type button {
+    padding: 5px 10px;
+    margin: 2px;
+    font-size: 14px;
+    background-color: #9b59b6;
+}
+
+#timer {
+    font-size: 24px;
+    text-align: center;
+    margin: 10px;
+    font-family: monospace;
+}
+
+.stats {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+}
+
+.undo-btn {
+    background-color: #e74c3c !important;
+}
+
+@media (max-width: 600px) {
+    .team-container {
+        flex-direction: column;
+    }
+    
+    .team {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .buttons, .point-type {
+        flex-direction: column;
+    }
+    
+    .buttons button, .point-type button {
+        width: 100%;
+        margin: 2px 0;
+    }
+}
+
+.history-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.clear-btn {
+    background-color: #e74c3c !important;
+}
+
+.export-btn {
+    background-color: #20CD8D !important;
+}
+
+.history-controls button {
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.timer-container {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#timerDisplay {
+    font-size: 2.5em;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.timer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.timer-controls button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #20CD8D;
+    color: white;
+    cursor: pointer;
+}
+
+.main-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.main-controls button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-btn {
+    background-color: #20CD8D;
+    color: white;
+}
+
+.save-btn:hover { 
+    background: #16bb7e; 
+}
+
+.reset-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.reset-btn:hover {
+    background-color: #c54435;
+}
+
+.history-btn {
+    background-color: #9b59b6;
+    color: white;
+}
+
+.history-btn:hover {
+    background-color: #8b53a1;
+}
+
+.history-panel {
+    display: none;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.history-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.history-controls button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.clear-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.back-btn {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+.saving-feedback {
+    animation: flash 1s;
+}
+
+@keyframes flash {
+    0% { background-color: normal; }
+    50% { background-color: #2ecc71; }
+    100% { background-color: normal; }
+}
+
+.btn-voltar {
+    background-color: #20CD8D;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    margin: 45%;
+}
+
+.btn-voltar:hover { 
+    background: #17a672; 
+}
