@@ -154,7 +154,7 @@ h1, h2 {
     background-color: #e74c3c !important;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .team-container {
         flex-direction: column;
     }
@@ -172,7 +172,7 @@ h1, h2 {
         width: 100%;
         margin: 2px 0;
     }
-}
+} */
 
 .history-controls {
     display: flex;
