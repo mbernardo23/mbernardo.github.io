@@ -351,6 +351,14 @@ h1, h2 {
     100% { background-color: normal; }
 }
 
+footer {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 20px;
+    text-align: center; /* Garante que o texto do botão também fique centralizado */
+}
+
 .btn-voltar {
     background-color: #20CD8D;
     color: white;
@@ -360,10 +368,8 @@ h1, h2 {
     font-weight: bold;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    justify-content: center;
-    align-items: center;
-    place-items: center;
-    margin: 45%;
+    display: inline-block; /* Permite que o flexbox do footer atue sobre ele */
+    margin: 0 auto; /* Redundância para navegadores mais antigos */
 }
 
 .btn-voltar:hover { 
