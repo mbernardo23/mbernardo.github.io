@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar Completo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link type="image/png" sizes="32x32" rel="icon" href="img/logo.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Placar Eletrônico</h1>
+        <div class="timer-container">
+            <div id="timerDisplay">00:00:00</div>
+            <div class="timer-controls">
+                <button onclick="controlTimer('start')">▶ Iniciar</button>
+                <button onclick="controlTimer('pause')">⏸ Pausar</button>
+                <button onclick="controlTimer('reset')">⏹ Zerar</button>
+            </div>
+        </div>
 
+        <div class="team-container">
+            <div class="team" id="teamA">
+                <input type="text" id="teamAName" placeholder="Time A" class="team-name">
+                <div class="score" id="scoreA">0</div>
+                <div class="buttons">
+                    <button onclick="modifyPoint('A', 'add')">+ Ponto</button>
+                    <button onclick="modifyPoint('A', 'remove')">- Ponto</button>
+                </div>
+            </div>
+            
+            <div class="team" id="teamB">
+                <input type="text" id="teamBName" placeholder="Time B" class="team-name">
+                <div class="score" id="scoreB">0</div>
+                <div class="buttons">
+                    <button onclick="modifyPoint('B', 'add')">+ Ponto</button>
+                    <button onclick="modifyPoint('B', 'remove')">- Ponto</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-controls">
+            <button onclick="saveGame()" class="save-btn" id="saveButton">Salvar Jogo</button>
+            <button onclick="resetGame()" class="reset-btn">Zerar Jogo</button>
+            <button onclick="showHistory()" class="history-btn">Histórico</button>
+        </div>
+
+        <!-- Painel do Histórico (inicialmente oculto) -->
+        <div class="history-panel" id="historyPanel">
+            <h2>Histórico de Partidas</h2>
+            <div class="history-controls">
+                <button onclick="exportData('json')" class="save-btn">Exportar JSON</button>
+                <button onclick="exportData('excel')" class="save-btn">Exportar Excel</button>
+                <button onclick="clearHistory()"class="clear-btn">Limpar Histórico</button>
+                <button onclick="hideHistory()"class="back-btn">Voltar</button>
+            </div>
+            <ul id="historyList"></ul>
+        </div>
+        <div>
+            <a href="javascript:history.back()" class="btn-voltar">Voltar</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.sheetjs.com/xlsx-0.19.3/package/dist/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
